@@ -5,6 +5,6 @@
 #include <signal.h>
 
 /*prototype*/
-void signalHandler(int sigNum);
+void	signalHandler(int sigNum);
 
 #endif
