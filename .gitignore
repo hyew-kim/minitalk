@@ -1,1 +1,9 @@
-.vscode
+/.vscode
+*.o
+*.a
+server
+client
+server_bonus
+client_bonus
+libft
+signal.c
