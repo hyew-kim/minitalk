@@ -1,6 +1,5 @@
 CC = gcc
-CFLAGS = -g
-CFLAGS2 = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 SRCS = server.c client.c
 OBJS = $(SRCS:.c=.o)
 
