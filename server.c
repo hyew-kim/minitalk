@@ -13,7 +13,7 @@ int	main(void)
 	}
 	signal(SIGUSR1, signalHandler);
 	signal(SIGUSR2, signalHandler);
-	while(1)
+	while (1)
 		pause();
 	return (0);
 }
@@ -26,7 +26,7 @@ void	signalHandler(int sigNum)
 	receive <<= 1;
 	if (sigNum == SIGUSR1)
 		receive += 0;
-	else 
+	else
 		receive += 1;
 	idx++;
 	if (idx == 8)
