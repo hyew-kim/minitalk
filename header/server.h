@@ -2,7 +2,7 @@
 # define SERVER_H
 
 /*header*/
-#include <signal.h>
+# include <signal.h>
 
 /*prototype*/
 void	signalHandler(int sigNum);

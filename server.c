@@ -3,7 +3,9 @@
 
 int	main(void)
 {
-	pid_t serverPID = getpid();
+	pid_t	serverPID;
+
+	serverPID = getpid();
 	if (serverPID)
 	ft_putnbr_fd(serverPID, 1);
 	ft_putstr_fd("\n", 1);
@@ -16,7 +18,7 @@ int	main(void)
 
 void	signalHandler(int sigNum)
 {
-	static char receive = 0;
+	static char	receive = 0;
 	static int	idx = 0;
 
 	receive <<= 1;

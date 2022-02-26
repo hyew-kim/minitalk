@@ -3,9 +3,9 @@
 
 int	main(int argc, char *argv[])
 {
-	int serverPID;
-	int len;
-	int i;
+	int	serverPID;
+	int	len;
+	int	i;
 
 	if (argc != 3)
 		return (0);
@@ -24,8 +24,8 @@ int	main(int argc, char *argv[])
 
 void	formatWord(char word, int serverPID)
 {
-	unsigned char num;
-	int idx;
+	unsigned char	num;
+	int	idx;
 
 	idx = 0;
 	num = 0x80;
@@ -38,11 +38,12 @@ void	formatWord(char word, int serverPID)
 	return ;
 }
 
-void	sendSignal(int sig, int serverPID){
+void	sendSignal(int sig, int serverPID)
+{
 	if(sig)
 		kill(serverPID, SIGUSR2);
 	else
 		kill(serverPID, SIGUSR1);
 	usleep(100);
-	return ;	
+	return ;
 }
