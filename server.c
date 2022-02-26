@@ -7,8 +7,10 @@ int	main(void)
 
 	serverPID = getpid();
 	if (serverPID)
-	ft_putnbr_fd(serverPID, 1);
-	ft_putstr_fd("\n", 1);
+	{
+		ft_putnbr_fd(serverPID, 1);
+		ft_putstr_fd("\n", 1);
+	}
 	signal(SIGUSR1, signalHandler);
 	signal(SIGUSR2, signalHandler);
 	while(1)
@@ -27,7 +29,6 @@ void	signalHandler(int sigNum)
 	else 
 		receive += 1;
 	idx++;
-
 	if (idx == 8)
 	{
 		ft_putchar_fd(receive, 1);

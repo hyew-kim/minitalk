@@ -25,7 +25,7 @@ int	main(int argc, char *argv[])
 void	formatWord(char word, int serverPID)
 {
 	unsigned char	num;
-	int	idx;
+	int				idx;
 
 	idx = 0;
 	num = 0x80;
@@ -40,7 +40,7 @@ void	formatWord(char word, int serverPID)
 
 void	sendSignal(int sig, int serverPID)
 {
-	if(sig)
+	if (sig)
 		kill(serverPID, SIGUSR2);
 	else
 		kill(serverPID, SIGUSR1);
